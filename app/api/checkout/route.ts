@@ -45,8 +45,8 @@ export async function POST(req: NextRequest) {
   }
 
   const origin =
-    req.headers.get("origin") ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
+    req.headers.get("origin")?.trim() ||
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
     "http://localhost:3010";
 
   try {

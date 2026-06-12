@@ -28,7 +28,7 @@ const jetbrains = localFont({
   display: "swap",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://strata.photography";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://strata.photography";
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://strata.photography";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://strata.photography";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const page = (path: string, priority: number): MetadataRoute.Sitemap[number][] =>
