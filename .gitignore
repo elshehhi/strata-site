@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+*.tsbuildinfo
+next-env.d.ts
+# local junction to ../docs-site/site — in production publish the guide at /docs
+public/docs

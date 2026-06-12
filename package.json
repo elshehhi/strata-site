@@ -1,0 +1,34 @@
+{
+  "name": "strata-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "STRATA — marketing site & checkout. An interactive exhibition about landscape photography, artistic authorship, and depth.",
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "prebuild": "node scripts/copy-docs.mjs",
+    "build": "next build",
+    "start": "next start -p 3010",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.8.0",
+    "framer-motion": "^11.11.7",
+    "gsap": "^3.12.5",
+    "next": "14.2.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stripe": "^16.12.0",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.10",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.169.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2"
+  }
+}
