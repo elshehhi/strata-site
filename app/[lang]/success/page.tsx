@@ -5,7 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import StrataMark from "@/components/StrataMark";
 import { getStripe } from "@/lib/stripe";
 import { getTier } from "@/lib/tiers";
-import { docsUrl, getDict, isLocale, type Locale } from "@/lib/i18n";
+import { getDict, isLocale, type Locale } from "@/lib/i18n";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const lang: Locale = isLocale(params.lang) ? params.lang : "ar";
@@ -78,9 +78,6 @@ export default async function SuccessPage({
             <Link href={`/${lang}/download`} className="cta">
               {t.download}
             </Link>
-            <a href={docsUrl(lang)} className="ghost">
-              {t.guide}
-            </a>
             <Link href={`/${lang}`} className="ghost">
               {t.again}
             </Link>

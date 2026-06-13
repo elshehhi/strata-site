@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import StrataMark from "@/components/StrataMark";
-import { docsUrl, getDict, isLocale, type Locale } from "@/lib/i18n";
+import { getDict, isLocale, type Locale } from "@/lib/i18n";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const lang: Locale = isLocale(params.lang) ? params.lang : "ar";
@@ -138,15 +138,6 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
                     </li>
                   ))}
                 </ol>
-                <div className="border-t border-hairline mt-6 pt-5">
-                  <p className="text-[12px] text-paper-low">{t.guideLine}</p>
-                  <a
-                    href={docsUrl(lang)}
-                    className="mt-3 inline-block text-[13px] text-dawn hover:text-dawn-hi transition-colors duration-fast"
-                  >
-                    {t.guideCta} {lang === "ar" ? "←" : "→"}
-                  </a>
-                </div>
               </div>
             </div>
           </div>

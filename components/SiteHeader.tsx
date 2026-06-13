@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import StrataMark from "./StrataMark";
-import { docsUrl, type Dict, type Locale } from "@/lib/i18n";
+import { type Dict, type Locale } from "@/lib/i18n";
 
 /**
  * Instrument titlebar, not a nav bar. Invisible over the opening; condenses
@@ -54,9 +54,6 @@ export default function SiteHeader({ lang, t }: { lang: Locale; t: Dict["header"
 
         {/* Desktop row — unchanged, hidden on phones */}
         <nav className="hidden sm:flex items-center gap-5 sm:gap-7">
-          <a href={docsUrl(lang)} className={linkBase}>
-            {t.docs}
-          </a>
           <Link href={`/${lang}/pricing`} className={linkBase}>
             {t.pricing}
           </Link>
@@ -110,10 +107,7 @@ export default function SiteHeader({ lang, t }: { lang: Locale; t: Dict["header"
       {/* Mobile sheet — stacked, generous touch targets, glass behind it */}
       {open && (
         <nav className="sm:hidden border-t border-hairline px-6 pt-3 pb-6 flex flex-col">
-          <a href={docsUrl(lang)} className={`${linkBase} py-3`}>
-            {t.docs}
-          </a>
-          <Link href={`/${lang}/pricing`} className={`${linkBase} py-3 border-t border-hairline/60`}>
+          <Link href={`/${lang}/pricing`} className={`${linkBase} py-3`}>
             {t.pricing}
           </Link>
           <Link

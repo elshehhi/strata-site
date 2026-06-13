@@ -1,6 +1,6 @@
 import Link from "next/link";
 import StrataMark from "./StrataMark";
-import { docsUrl, type Dict, type Locale } from "@/lib/i18n";
+import { type Dict, type Locale } from "@/lib/i18n";
 
 /** The maker's plate — the same register the closing chapter carried. */
 export default function SiteFooter({ lang, t }: { lang: Locale; t: Dict["closing"] }) {
@@ -19,9 +19,6 @@ export default function SiteFooter({ lang, t }: { lang: Locale; t: Dict["closing
           <Link href={`/${lang}/pricing`} className="hover:text-paper-mid transition-colors duration-fast">
             {t.navPricing}
           </Link>
-          <a href={docsUrl(lang)} className="hover:text-paper-mid transition-colors duration-fast">
-            {t.navDocs}
-          </a>
           <Link href={`/${lang}/account`} className="hover:text-paper-mid transition-colors duration-fast">
             {t.navAccount}
           </Link>
