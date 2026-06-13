@@ -20,7 +20,12 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
   const lang: Locale = isLocale(params.lang) ? params.lang : "ar";
   const d = getDict(lang);
   const t = d.download;
-  const winUrl = process.env.NEXT_PUBLIC_DOWNLOAD_URL_WIN ?? null;
+  // Default to the GitHub Releases "latest" asset so the button works even if
+  // the Netlify env isn't set; NEXT_PUBLIC_DOWNLOAD_URL_WIN still overrides it.
+  // (Requires the installer asset name to stay STRATA-Setup-win64.exe per release.)
+  const winUrl =
+    process.env.NEXT_PUBLIC_DOWNLOAD_URL_WIN?.trim() ||
+    "https://github.com/elshehhi/strata-releases/releases/latest/download/STRATA-Setup-win64.exe";
 
   return (
     <>
