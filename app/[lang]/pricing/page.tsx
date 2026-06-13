@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import MakerLetter from "@/components/nine/MakerLetter";
-import { TIERS } from "@/lib/tiers";
+import { TIERS, activateUrl } from "@/lib/tiers";
 import { getDict, isLocale, type Locale } from "@/lib/i18n";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
@@ -101,20 +100,20 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                     </p>
                   )}
 
-                  <Link
-                    href={`/${lang}/checkout?tier=${tier.id}`}
+                  <a
+                    href={activateUrl(tier.id, "monthly")}
                     className={`mt-8 text-center ${
                       tier.recommended ? "cta justify-center" : "ghost justify-center"
                     }`}
                   >
                     {t.take(s.name)}
-                  </Link>
-                  <Link
-                    href={`/${lang}/checkout?tier=${tier.id}&billing=annual`}
+                  </a>
+                  <a
+                    href={activateUrl(tier.id, "annual")}
                     className="voice-truth mt-3 text-center text-[11px] text-paper-low hover:text-dawn transition-colors duration-fast"
                   >
                     {d.nine.payAnnual[tier.id]}
-                  </Link>
+                  </a>
                   {/* the guarantees, welded to the price — not four chapters away */}
                   <p className="voice-truth mt-5 text-[10px] text-paper-low leading-relaxed text-center">
                     {d.nine.weld}

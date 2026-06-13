@@ -37,3 +37,17 @@ export const TRIAL_DAYS = Number(process.env.NEXT_PUBLIC_TRIAL_DAYS ?? 0) || 0;
 export function getTier(id: string | null | undefined): Tier | undefined {
   return TIERS.find((t) => t.id === id);
 }
+
+/**
+ * The hosted activation page. The website never charges directly — a desktop
+ * license must be bound to a Supabase account, so every "buy" routes here
+ * (sign in → pay → the app unlocks). The chosen tier/billing rides along so
+ * the activation page can pre-select it.
+ */
+export const ACTIVATE_URL =
+  process.env.NEXT_PUBLIC_ACTIVATE_URL?.trim() || "https://activate.aelshehhi.com";
+
+export function activateUrl(tier: TierId, billing: Billing = "monthly"): string {
+  const p = new URLSearchParams({ tier, billing });
+  return `${ACTIVATE_URL}/?${p.toString()}`;
+}

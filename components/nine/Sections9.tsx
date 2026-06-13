@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { TIERS } from "@/lib/tiers";
+import { TIERS, activateUrl } from "@/lib/tiers";
 import type { Dict, Locale } from "@/lib/i18n";
 
 /* Three arrivals, not one (panel P2 — "one verb kills tempo"):
@@ -209,7 +209,7 @@ export function Pricing9({
         <div className="mt-14 grid sm:grid-cols-3 gap-4 items-center">
           {TIERS.map((tier, i) => {
             const s = tiersT[tier.id];
-            const checkout = `/${lang}/checkout?tier=${tier.id}`;
+            const checkout = activateUrl(tier.id);
             return (
               <R key={tier.id} i={1 + i}>
                 {tier.recommended ? (
@@ -228,16 +228,16 @@ export function Pricing9({
                       {t.annual[tier.id]}
                     </p>
                     <p className="mt-4 text-[13px] text-paper-mid leading-relaxed">{s.reading}</p>
-                    <Link href={checkout} className="cta justify-center w-full mt-6">
+                    <a href={checkout} className="cta justify-center w-full mt-6">
                       {t.takePro}
-                    </Link>
+                    </a>
                     <p className="voice-truth mt-4 text-[10px] text-paper-low leading-relaxed">
                       {t.weld}
                     </p>
                   </div>
                 ) : (
                   /* the quiet alternatives */
-                  <Link
+                  <a
                     href={checkout}
                     className="block rounded-lg bg-ink-1 hairline p-7 opacity-90 hover:opacity-100 hover:bg-ink-2 transition-all duration-med ease-strata"
                   >
@@ -251,7 +251,7 @@ export function Pricing9({
                     </p>
                     <p className="mt-3 text-[12.5px] text-paper-mid leading-relaxed">{s.reading}</p>
                     <p className="voice-truth mt-4 text-[10px] text-paper-low">{t.weld}</p>
-                  </Link>
+                  </a>
                 )}
               </R>
             );
