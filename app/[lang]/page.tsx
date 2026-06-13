@@ -33,7 +33,7 @@ export default function Home({ params }: { params: { lang: string } }) {
       <TerrainCanvas />
       <SiteHeader lang={lang} t={t.header} />
       <main className="relative z-10">
-        <Hero9 t={t.nine} />
+        <Hero9 t={t.nine} lang={lang} />
         <Provoke9 t={t.nine} />
         <CreedSetpiece
           t={t.nine}

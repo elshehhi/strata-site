@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import MakerLetter from "@/components/nine/MakerLetter";
-import { TIERS, activateUrl } from "@/lib/tiers";
+import FoundingCountdown from "@/components/nine/FoundingCountdown";
+import { TIERS, activateUrl, FOUNDING_DEADLINE } from "@/lib/tiers";
 import { getDict, isLocale, type Locale } from "@/lib/i18n";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
@@ -46,6 +47,18 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
           </h1>
           <p className="mt-6 text-paper-mid text-[15px] max-w-lg leading-relaxed">{t.p}</p>
 
+          {/* founding-price frame — honest scarcity, stated before the cards */}
+          <p className="mt-6 max-w-xl border-s-2 border-dawn/40 ps-4 text-[13px] text-dawn-hi/90 leading-relaxed">
+            {d.nine.foundingBanner}
+          </p>
+
+          {/* the real deadline the founding rate ends on — hides itself once past */}
+          {FOUNDING_DEADLINE && (
+            <div className="mt-7">
+              <FoundingCountdown deadline={FOUNDING_DEADLINE} t={d.nine.countdown} />
+            </div>
+          )}
+
           {/* the bridge between conviction and the ask */}
           <div className="mt-14">
             <MakerLetter t={d.nine} />
@@ -75,12 +88,23 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                     {s.reading}
                   </p>
 
-                  <p className="mt-7 flex items-baseline gap-2">
+                  {/* the discount is the headline — louder than the figure */}
+                  <p className="mt-7">
+                    <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-[15px] font-medium tracking-tight text-[#1a1410]">
+                      {d.nine.off[tier.id]}
+                      <span className="text-[11px] font-normal opacity-80">{d.nine.foundingBadge}</span>
+                    </span>
+                  </p>
+                  <p className="mt-3 flex items-baseline gap-2.5">
+                    <span className="voice-truth text-xl text-paper-low/70 line-through decoration-rust/60 decoration-1">
+                      ${tier.regularMonthly}
+                    </span>
                     <span className="voice-moment text-5xl text-paper-hi">${tier.priceMonthly}</span>
                     <span className="voice-truth text-[11px] text-paper-low">{t.perMonth}</span>
                   </p>
-                  <p className="voice-truth mt-1.5 text-[11px] text-dawn">
-                    {d.nine.annual[tier.id]}
+                  <p className="voice-truth mt-2 text-[11px] text-dawn">{d.nine.annual[tier.id]}</p>
+                  <p className="voice-truth mt-2 text-[10.5px] text-paper-low leading-relaxed">
+                    {d.nine.foundingNote}
                   </p>
 
                   <ul className="mt-8 space-y-3 flex-1">
@@ -114,8 +138,12 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                   >
                     {d.nine.payAnnual[tier.id]}
                   </a>
+                  {/* the price-lock — the strongest reason to buy now, not later */}
+                  <p className="voice-truth mt-5 text-[10.5px] text-dawn/85 leading-relaxed text-center">
+                    {d.nine.priceLock}
+                  </p>
                   {/* the guarantees, welded to the price — not four chapters away */}
-                  <p className="voice-truth mt-5 text-[10px] text-paper-low leading-relaxed text-center">
+                  <p className="voice-truth mt-2 text-[10px] text-paper-low leading-relaxed text-center">
                     {d.nine.weld}
                   </p>
                 </div>

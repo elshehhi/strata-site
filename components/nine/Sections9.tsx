@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { TIERS, activateUrl } from "@/lib/tiers";
+import { TIERS, activateUrl, FOUNDING_DEADLINE } from "@/lib/tiers";
+import FoundingCountdown from "./FoundingCountdown";
 import type { Dict, Locale } from "@/lib/i18n";
 
 /* Three arrivals, not one (panel P2 — "one verb kills tempo"):
@@ -204,6 +205,14 @@ export function Pricing9({
             {closing.h}
           </h2>
           <p className="mt-5 text-paper-mid text-[15px]">{closing.p}</p>
+          <p className="mt-5 mx-auto max-w-xl text-[13px] text-dawn-hi/90 leading-relaxed">
+            {t.foundingBanner}
+          </p>
+          {FOUNDING_DEADLINE && (
+            <div className="mt-7 flex justify-center">
+              <FoundingCountdown deadline={FOUNDING_DEADLINE} t={t.countdown} />
+            </div>
+          )}
         </R>
 
         <div className="mt-14 grid sm:grid-cols-3 gap-4 items-center">
@@ -216,7 +225,18 @@ export function Pricing9({
                   /* the one answer — weight, not light (glow softened per panel) */
                   <div className="relative rounded-lg bg-ink-1 hairline-strong p-8 sm:scale-[1.05] shadow-[0_0_44px_-20px_rgba(232,162,92,.28)]">
                     <p className="voice-moment text-2xl text-paper-hi">{s.name}</p>
-                    <p className="mt-3 flex items-baseline gap-2">
+                    <p className="mt-3">
+                      <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-[15px] font-medium tracking-tight text-[#1a1410]">
+                        {t.off[tier.id]}
+                        <span className="text-[11px] font-normal opacity-80">
+                          {t.foundingBadge}
+                        </span>
+                      </span>
+                    </p>
+                    <p className="mt-3 flex items-baseline gap-2.5">
+                      <span className="voice-truth text-xl text-paper-low/70 line-through decoration-rust/60 decoration-1">
+                        ${tier.regularMonthly}
+                      </span>
                       <span className="voice-moment text-5xl text-paper-hi">
                         ${tier.priceMonthly}
                       </span>
@@ -224,14 +244,15 @@ export function Pricing9({
                         {closing.perMonth}
                       </span>
                     </p>
-                    <p className="voice-truth mt-1.5 text-[11px] text-dawn">
-                      {t.annual[tier.id]}
-                    </p>
+                    <p className="voice-truth mt-2 text-[11px] text-dawn">{t.annual[tier.id]}</p>
                     <p className="mt-4 text-[13px] text-paper-mid leading-relaxed">{s.reading}</p>
                     <a href={checkout} className="cta justify-center w-full mt-6">
                       {t.takePro}
                     </a>
-                    <p className="voice-truth mt-4 text-[10px] text-paper-low leading-relaxed">
+                    <p className="voice-truth mt-4 text-[10.5px] text-dawn/85 leading-relaxed">
+                      {t.priceLock}
+                    </p>
+                    <p className="voice-truth mt-2 text-[10px] text-paper-low leading-relaxed">
                       {t.weld}
                     </p>
                   </div>
@@ -241,8 +262,16 @@ export function Pricing9({
                     href={checkout}
                     className="block rounded-lg bg-ink-1 hairline p-7 opacity-90 hover:opacity-100 hover:bg-ink-2 transition-all duration-med ease-strata"
                   >
-                    <p className="voice-moment text-lg text-paper-hi">{s.name}</p>
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="voice-moment text-lg text-paper-hi">{s.name}</p>
+                      <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-2.5 py-1 text-[12px] font-medium text-[#1a1410]">
+                        {t.off[tier.id]}
+                      </span>
+                    </div>
                     <p className="voice-truth mt-2 text-[12px] text-paper-low">
+                      <span className="line-through decoration-rust/60 me-1.5">
+                        ${tier.regularMonthly}
+                      </span>
                       <span className="text-dawn">${tier.priceMonthly}</span> {closing.perMonth}
                       <span className="mx-1.5" aria-hidden>
                         ·
@@ -258,9 +287,15 @@ export function Pricing9({
           })}
         </div>
 
+        <R i={4}>
+          <p className="voice-truth mt-10 mx-auto max-w-2xl text-center text-[12px] text-paper-mid leading-relaxed">
+            {t.guarantee}
+          </p>
+        </R>
+
         {t.trialLine && (
-          <R i={4}>
-            <p className="voice-truth mt-9 text-center text-[11px] text-sage">{t.trialLine}</p>
+          <R i={5}>
+            <p className="voice-truth mt-4 text-center text-[11px] text-sage">{t.trialLine}</p>
           </R>
         )}
       </div>
