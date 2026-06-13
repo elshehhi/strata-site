@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import MakerLetter from "@/components/nine/MakerLetter";
 import FoundingCountdown from "@/components/nine/FoundingCountdown";
-import { TIERS, activateUrl, FOUNDING_DEADLINE } from "@/lib/tiers";
+import BuyFlow from "@/components/nine/BuyFlow";
+import { TIERS, FOUNDING_DEADLINE } from "@/lib/tiers";
 import { getDict, isLocale, type Locale } from "@/lib/i18n";
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
@@ -124,20 +125,17 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                     </p>
                   )}
 
-                  <a
-                    href={activateUrl(tier.id, "monthly")}
-                    className={`mt-8 text-center ${
-                      tier.recommended ? "cta justify-center" : "ghost justify-center"
-                    }`}
-                  >
-                    {t.take(s.name)}
-                  </a>
-                  <a
-                    href={activateUrl(tier.id, "annual")}
-                    className="voice-truth mt-3 text-center text-[11px] text-paper-low hover:text-dawn transition-colors duration-fast"
-                  >
-                    {d.nine.payAnnual[tier.id]}
-                  </a>
+                  {/* the buy popup handles the monthly/yearly choice + trial promise */}
+                  <div className="mt-8">
+                    <BuyFlow
+                      tier={tier}
+                      lang={lang}
+                      label={t.take(s.name)}
+                      planName={s.name}
+                      variant={tier.recommended ? "cta" : "ghost"}
+                      t={d.nine.buy}
+                    />
+                  </div>
                   {/* the price-lock — the strongest reason to buy now, not later */}
                   <p className="voice-truth mt-5 text-[10.5px] text-dawn/85 leading-relaxed text-center">
                     {d.nine.priceLock}

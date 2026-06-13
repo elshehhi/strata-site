@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { TIERS, activateUrl, FOUNDING_DEADLINE } from "@/lib/tiers";
+import { TIERS, FOUNDING_DEADLINE } from "@/lib/tiers";
 import FoundingCountdown from "./FoundingCountdown";
+import BuyFlow from "./BuyFlow";
 import type { Dict, Locale } from "@/lib/i18n";
 
 /* Three arrivals, not one (panel P2 — "one verb kills tempo"):
@@ -215,12 +216,12 @@ export function Pricing9({
           )}
         </R>
 
-        <div className="mt-14 grid sm:grid-cols-3 gap-4 items-center">
+        <div className="mt-14 grid sm:grid-cols-3 gap-4 items-stretch">
           {TIERS.map((tier, i) => {
             const s = tiersT[tier.id];
-            const checkout = activateUrl(tier.id);
+            const label = t.buy.choose.replace("__PLAN__", s.name);
             return (
-              <R key={tier.id} i={1 + i}>
+              <R key={tier.id} i={1 + i} className="h-full">
                 {tier.recommended ? (
                   /* the one answer — weight, not light (glow softened per panel) */
                   <div className="relative rounded-lg bg-ink-1 hairline-strong p-8 sm:scale-[1.05] shadow-[0_0_44px_-20px_rgba(232,162,92,.28)]">
@@ -246,9 +247,16 @@ export function Pricing9({
                     </p>
                     <p className="voice-truth mt-2 text-[11px] text-dawn">{t.annual[tier.id]}</p>
                     <p className="mt-4 text-[13px] text-paper-mid leading-relaxed">{s.reading}</p>
-                    <a href={checkout} className="cta justify-center w-full mt-6">
-                      {t.takePro}
-                    </a>
+                    <div className="mt-6">
+                      <BuyFlow
+                        tier={tier}
+                        lang={lang}
+                        label={label}
+                        planName={s.name}
+                        variant="cta"
+                        t={t.buy}
+                      />
+                    </div>
                     <p className="voice-truth mt-4 text-[10.5px] text-dawn/85 leading-relaxed">
                       {t.priceLock}
                     </p>
@@ -258,10 +266,7 @@ export function Pricing9({
                   </div>
                 ) : (
                   /* the quiet alternatives */
-                  <a
-                    href={checkout}
-                    className="block rounded-lg bg-ink-1 hairline p-7 opacity-90 hover:opacity-100 hover:bg-ink-2 transition-all duration-med ease-strata"
-                  >
+                  <div className="rounded-lg bg-ink-1 hairline p-7 h-full flex flex-col">
                     <div className="flex items-center justify-between gap-2">
                       <p className="voice-moment text-lg text-paper-hi">{s.name}</p>
                       <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-2.5 py-1 text-[12px] font-medium text-[#1a1410]">
@@ -278,9 +283,21 @@ export function Pricing9({
                       </span>
                       {t.annual[tier.id]}
                     </p>
-                    <p className="mt-3 text-[12.5px] text-paper-mid leading-relaxed">{s.reading}</p>
+                    <p className="mt-3 text-[12.5px] text-paper-mid leading-relaxed flex-1">
+                      {s.reading}
+                    </p>
                     <p className="voice-truth mt-4 text-[10px] text-paper-low">{t.weld}</p>
-                  </a>
+                    <div className="mt-5">
+                      <BuyFlow
+                        tier={tier}
+                        lang={lang}
+                        label={label}
+                        planName={s.name}
+                        variant="ghost"
+                        t={t.buy}
+                      />
+                    </div>
+                  </div>
                 )}
               </R>
             );

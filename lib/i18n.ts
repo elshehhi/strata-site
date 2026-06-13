@@ -346,6 +346,28 @@ const en = {
         ? `First ${TRIAL_DAYS} days free — try it on your own stacks before the first charge.`
         : "",
     takePro: "Choose the Professional plan",
+    /* The two-step buy popup: pick billing (yearly vs monthly, with the saving
+       shown), then a confirm step that makes the free trial / no-charge promise.
+       Numbers (__N__) are filled in the component from the tier data. */
+    buy: {
+      chooseBilling: "Choose how to pay",
+      billingSub: "Both include a 14-day free trial — you pay nothing today.",
+      yearlyLabel: "Pay yearly",
+      monthlyLabel: "Pay monthly",
+      perYear: "/year",
+      perMonth: "/month",
+      bestValue: "Best value",
+      off50: "50% founding discount",
+      saveAYear: "Save $__N__ a year vs monthly",
+      nothingToday: "You pay nothing today",
+      trialReassure:
+        "Your 14-day free trial starts now. If STRATA isn't for you, just uninstall it and cancel before day 14 — you won't be charged anything.",
+      chargeAfter: "You're only charged after the 14 days, and you can cancel anytime.",
+      startTrial: "Start my 14-day free trial",
+      back: "Back",
+      yourPlan: "Your plan",
+      choose: "Choose the __PLAN__ plan",
+    },
   },
   pricing: {
     metaTitle: "Pricing",
@@ -709,6 +731,25 @@ const ar: Dict = {
     trialLine:
       TRIAL_DAYS > 0 ? `أول ${TRIAL_DAYS} يومًا مجانًا — جرّبه على صورك أنت قبل أي خصم.` : "",
     takePro: "اختر الباقة الاحترافية",
+    buy: {
+      chooseBilling: "اختر طريقة الدفع",
+      billingSub: "كلاهما يشمل تجربة مجانية 14 يومًا — لن تدفع شيئًا اليوم.",
+      yearlyLabel: "ادفع سنويًا",
+      monthlyLabel: "ادفع شهريًا",
+      perYear: "/سنة",
+      perMonth: "/شهر",
+      bestValue: "الأوفر",
+      off50: "خصم تأسيسي 50%",
+      saveAYear: "وفّر $__N__ في السنة مقارنةً بالشهري",
+      nothingToday: "لن تدفع شيئًا اليوم",
+      trialReassure:
+        "تبدأ تجربتك المجانية 14 يومًا الآن. إن لم يعجبك ستراتا، احذفه وألغِ اشتراكك قبل اليوم الـ14 — ولن يُخصم منك أي مبلغ.",
+      chargeAfter: "لا يُخصم منك إلا بعد 14 يومًا، وتقدر تلغي في أي وقت.",
+      startTrial: "ابدأ تجربتي المجانية 14 يومًا",
+      back: "رجوع",
+      yourPlan: "باقتك",
+      choose: "اختر باقة __PLAN__",
+    },
   },
   pricing: {
     metaTitle: "التسعير",
