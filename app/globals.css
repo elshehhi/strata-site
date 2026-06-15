@@ -98,6 +98,7 @@ html[dir="rtl"] .micro-label {
 }
 html[dir="rtl"] .micro-label {
   letter-spacing: 0.06em; /* Arabic letters don't track like Latin caps */
+  font-size: 12px; /* 10px Latin labels read too small in Arabic */
 }
 
 /* Arabic typography tuning — the scale's negative tracking is Latin-only (Arabic is a connected
@@ -108,6 +109,14 @@ html[dir="rtl"] [class*="text-display"] { letter-spacing: 0; line-height: 1.3; }
 html[dir="rtl"] [class*="text-feature"] { letter-spacing: 0; line-height: 1.35; }
 html[dir="rtl"] [class*="text-heading"] { letter-spacing: 0; line-height: 1.4; }
 html[dir="rtl"] [class*="text-title"]   { letter-spacing: 0; line-height: 1.45; }
+
+/* Arabic reads ~1 step smaller than Latin at the same px, so nudge the body-range rungs up under
+   RTL (on top of the global bump) — small copy stays comfortable on wide desktops at 100%. */
+html[dir="rtl"] [class*="text-lead"]    { font-size: 1.25rem; }    /* 20px */
+html[dir="rtl"] [class*="text-body"]    { font-size: 1.0625rem; }  /* 17px */
+html[dir="rtl"] [class*="text-sm"]      { font-size: 0.9375rem; }  /* 15px */
+html[dir="rtl"] [class*="text-caption"] { font-size: 0.84375rem; } /* 13.5px */
+html[dir="rtl"] [class*="text-micro"]   { font-size: 0.75rem; }    /* 12px */
 
 .voice-moment {
   /* Fraunces 300 — only where a human decision or verdict lives */

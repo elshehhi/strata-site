@@ -40,11 +40,11 @@ const config: Config = {
       // are baked in. Voices: micro = JetBrains label · caption/sm/body/lead = Inter Tight ·
       // title/heading/feature/display = Fraunces (pair with font-display).
       fontSize: {
-        micro: ["0.625rem", { lineHeight: "1", letterSpacing: "0.14em" }], // 10px — mono uppercase labels
-        caption: ["0.75rem", { lineHeight: "1.5" }], // 12px — captions / fine print
-        sm: ["0.8125rem", { lineHeight: "1.55" }], // 13px — secondary / UI text
-        body: ["0.9375rem", { lineHeight: "1.65" }], // 15px — reading body
-        lead: ["1.125rem", { lineHeight: "1.6" }], // 18px — lead paragraphs
+        micro: ["0.6875rem", { lineHeight: "1", letterSpacing: "0.14em" }], // 11px — mono uppercase labels
+        caption: ["0.8125rem", { lineHeight: "1.5" }], // 13px — captions / fine print
+        sm: ["0.875rem", { lineHeight: "1.55" }], // 14px — secondary / UI text
+        body: ["1rem", { lineHeight: "1.65" }], // 16px — reading body
+        lead: ["1.1875rem", { lineHeight: "1.6" }], // 19px — lead paragraphs
         title: ["1.5rem", { lineHeight: "1.3", letterSpacing: "-0.01em" }], // 24px — card / sub-section titles
         heading: ["2rem", { lineHeight: "1.18", letterSpacing: "-0.015em" }], // 32px — section headings
         feature: ["2.75rem", { lineHeight: "1.08", letterSpacing: "-0.02em" }], // 44px — chapter / feature titles
