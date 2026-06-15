@@ -64,12 +64,12 @@ export default function FieldChapter({ t, lede }: { t: Dict["field"]; lede?: str
       <div className="min-h-screen flex flex-col justify-center py-20">
         <div className="px-6 md:px-16 mb-12">
           <p className="micro-label mb-5">{t.chapter}</p>
-          <h2 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
+          <h2 className="voice-moment text-heading sm:text-feature text-paper-hi leading-tight">
             {t.h}
           </h2>
           <p className="mt-4 text-paper-mid text-body max-w-md">{t.p}</p>
           {lede && (
-            <p className="voice-moment mt-6 text-xl text-dawn-hi">{lede}</p>
+            <p className="voice-moment mt-6 text-lead text-dawn-hi">{lede}</p>
           )}
         </div>
 
@@ -93,7 +93,7 @@ export default function FieldChapter({ t, lede }: { t: Dict["field"]; lede?: str
               </div>
               {/* gallery plate */}
               <figcaption className="mt-5 flex items-baseline justify-between gap-3">
-                <span className="voice-moment text-lg text-paper-hi">{t.titles[w.key]}</span>
+                <span className="voice-moment text-lead text-paper-hi">{t.titles[w.key]}</span>
                 <span className="voice-truth text-micro tracking-micro uppercase text-paper-low">
                   {t.chip}
                 </span>

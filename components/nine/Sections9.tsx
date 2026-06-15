@@ -72,7 +72,7 @@ export function Provoke9({ t }: { t: Dict["nine"] }) {
       <div className="mx-auto max-w-3xl text-center">
         <Rf i={0}>
           <p className="micro-label mb-7">{t.provokeLabel}</p>
-          <p className="voice-moment text-2xl sm:text-3xl text-paper-hi leading-snug">
+          <p className="voice-moment text-title sm:text-heading text-paper-hi leading-snug">
             {t.provoke1}
           </p>
         </Rf>
@@ -82,7 +82,7 @@ export function Provoke9({ t }: { t: Dict["nine"] }) {
           </p>
         </Rf>
         <Rf i={2}>
-          <p className="voice-moment mt-7 text-xl sm:text-2xl text-dawn-hi">{t.provoke3}</p>
+          <p className="voice-moment mt-7 text-lead sm:text-title text-dawn-hi">{t.provoke3}</p>
         </Rf>
       </div>
     </section>
@@ -106,7 +106,7 @@ export function How9({ t }: { t: Dict["nine"] }) {
                 <p className="voice-truth text-caption text-dawn mb-4">
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <p className="voice-moment text-lg text-paper-hi leading-snug">{s}</p>
+                <p className="voice-moment text-lead text-paper-hi leading-snug">{s}</p>
               </div>
             </R>
           ))}
@@ -144,7 +144,7 @@ export function Custody9({ t }: { t: Dict["nine"] }) {
       <div className="relative mx-auto max-w-3xl text-center">
         <Rs i={0}>
           <p className="micro-label mb-7">{t.custodyLabel}</p>
-          <h2 className="voice-moment text-3xl sm:text-5xl leading-[1.15] text-paper-hi">
+          <h2 className="voice-moment text-heading sm:text-feature leading-[1.15] text-paper-hi">
             {t.custodyBig}
           </h2>
           <p className="voice-truth mt-7 text-caption text-paper-mid leading-relaxed">
@@ -152,7 +152,7 @@ export function Custody9({ t }: { t: Dict["nine"] }) {
           </p>
         </Rs>
         <R i={2} className="mt-12 rounded-lg bg-ink-1 hairline-strong p-8 text-start">
-          <p className="voice-moment text-xl text-dawn-hi mb-4">{t.cancelQ}</p>
+          <p className="voice-moment text-lead text-dawn-hi mb-4">{t.cancelQ}</p>
           <p className="text-body text-paper-mid leading-relaxed">{t.cancelA}</p>
         </R>
       </div>
@@ -175,7 +175,7 @@ export function Manifesto9({ t }: { t: Dict["nine"] }) {
                 <span className="voice-truth text-caption text-dawn">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="voice-moment text-xl sm:text-2xl text-paper-hi">{m}</p>
+                <p className="voice-moment text-lead sm:text-title text-paper-hi">{m}</p>
               </div>
             </Rf>
           ))}
@@ -202,7 +202,7 @@ export function Pricing9({
     <section className="relative px-6 py-36">
       <div className="mx-auto max-w-5xl">
         <R i={0} className="text-center">
-          <h2 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
+          <h2 className="voice-moment text-heading sm:text-feature text-paper-hi leading-tight">
             {closing.h}
           </h2>
           <p className="mt-5 text-paper-mid text-body">{closing.p}</p>
@@ -225,7 +225,7 @@ export function Pricing9({
                 {tier.recommended ? (
                   /* the one answer — weight, not light (glow softened per panel) */
                   <div className="relative rounded-lg bg-ink-1 hairline-strong p-8 sm:scale-[1.05] shadow-[0_0_44px_-20px_rgba(232,162,92,.28)]">
-                    <p className="voice-moment text-2xl text-paper-hi">{s.name}</p>
+                    <p className="voice-moment text-title text-paper-hi">{s.name}</p>
                     <p className="mt-3">
                       <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-body font-medium tracking-tight text-[#1a1410]">
                         {t.off[tier.id]}
@@ -235,10 +235,10 @@ export function Pricing9({
                       </span>
                     </p>
                     <p className="mt-3 flex items-baseline gap-2.5">
-                      <span className="voice-truth text-xl text-paper-low/70 line-through decoration-rust/60 decoration-1">
+                      <span className="voice-truth text-lead text-paper-low/70 line-through decoration-rust/60 decoration-1">
                         ${tier.regularMonthly}
                       </span>
-                      <span className="voice-moment text-5xl text-paper-hi">
+                      <span className="voice-moment text-feature text-paper-hi">
                         ${tier.priceMonthly}
                       </span>
                       <span className="voice-truth text-caption text-paper-low">
@@ -268,7 +268,7 @@ export function Pricing9({
                   /* the quiet alternatives */
                   <div className="rounded-lg bg-ink-1 hairline p-7 h-full flex flex-col">
                     <div className="flex items-center justify-between gap-2">
-                      <p className="voice-moment text-lg text-paper-hi">{s.name}</p>
+                      <p className="voice-moment text-lead text-paper-hi">{s.name}</p>
                       <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-2.5 py-1 text-caption font-medium text-[#1a1410]">
                         {t.off[tier.id]}
                       </span>

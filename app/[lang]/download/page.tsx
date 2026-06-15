@@ -47,7 +47,7 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
 
         <div className="relative mx-auto max-w-5xl">
           <p className="micro-label mb-5">{t.label}</p>
-          <h1 className="voice-moment text-4xl sm:text-6xl text-paper-hi leading-[1.08] max-w-2xl">
+          <h1 className="voice-moment text-heading sm:text-display text-paper-hi leading-[1.08] max-w-2xl">
             {t.h1a}
             <br />
             {t.h1b}
@@ -61,7 +61,7 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
               <div className="rounded-lg bg-ink-1 hairline-strong p-8 shadow-[0_0_70px_-22px_rgba(232,162,92,.35)]">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="voice-moment text-2xl text-paper-hi">{t.winTitle}</h2>
+                    <h2 className="voice-moment text-title text-paper-hi">{t.winTitle}</h2>
                     <p className="voice-truth mt-2 text-caption text-paper-low">{t.winSpec}</p>
                   </div>
                   <span className="voice-truth text-micro tracking-micro uppercase px-3 py-1.5 rounded bg-ink-2 border border-hairline text-dawn">
@@ -94,7 +94,7 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
 
               {/* macOS — honest */}
               <div className="rounded-lg bg-ink-1 hairline p-8">
-                <h2 className="voice-moment text-xl text-paper-mid">{t.macTitle}</h2>
+                <h2 className="voice-moment text-lead text-paper-mid">{t.macTitle}</h2>
                 <p className="mt-3 text-sm text-paper-low leading-relaxed">{t.macLine}</p>
               </div>
 

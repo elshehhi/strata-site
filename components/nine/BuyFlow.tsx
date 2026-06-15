@@ -72,13 +72,13 @@ export default function BuyFlow({
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close"
-              className="absolute top-4 end-4 text-paper-low hover:text-paper-hi transition-colors duration-fast text-lg leading-none"
+              className="absolute top-4 end-4 text-paper-low hover:text-paper-hi transition-colors duration-fast text-lead leading-none"
             >
               ✕
             </button>
 
             <p className="micro-label text-dawn mb-1">{planName}</p>
-            <h3 className="voice-moment text-2xl text-paper-hi leading-snug">{t.chooseBilling}</h3>
+            <h3 className="voice-moment text-title text-paper-hi leading-snug">{t.chooseBilling}</h3>
             <p className="mt-2 text-sm text-paper-mid leading-relaxed">{t.billingSub}</p>
 
             <div className="mt-5 space-y-3">
@@ -89,13 +89,13 @@ export default function BuyFlow({
                 className="w-full text-start rounded-lg bg-ink-2 hairline-strong p-5 hover:bg-ink-0 transition-colors duration-fast"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="voice-moment text-lg text-paper-hi">{t.yearlyLabel}</span>
+                  <span className="voice-moment text-lead text-paper-hi">{t.yearlyLabel}</span>
                   <span className="voice-truth text-micro tracking-micro uppercase px-2 py-0.5 rounded bg-dawn text-[#1a1410]">
                     {t.bestValue}
                   </span>
                 </div>
                 <p className="mt-1.5">
-                  <span className="voice-moment text-3xl text-paper-hi">${tier.priceAnnual}</span>
+                  <span className="voice-moment text-heading text-paper-hi">${tier.priceAnnual}</span>
                   <span className="voice-truth text-caption text-paper-low"> {t.perYear}</span>
                 </p>
                 <p className="voice-truth text-caption text-dawn mt-1.5">
@@ -109,9 +109,9 @@ export default function BuyFlow({
                 onClick={() => go("monthly")}
                 className="w-full text-start rounded-lg bg-ink-2 hairline p-5 hover:bg-ink-0 transition-colors duration-fast"
               >
-                <span className="voice-moment text-lg text-paper-hi">{t.monthlyLabel}</span>
+                <span className="voice-moment text-lead text-paper-hi">{t.monthlyLabel}</span>
                 <p className="mt-1.5">
-                  <span className="voice-moment text-3xl text-paper-hi">${tier.priceMonthly}</span>
+                  <span className="voice-moment text-heading text-paper-hi">${tier.priceMonthly}</span>
                   <span className="voice-truth text-caption text-paper-low"> {t.perMonth}</span>
                 </p>
                 <p className="voice-truth text-caption text-paper-low mt-1.5">{t.off50}</p>

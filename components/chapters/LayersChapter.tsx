@@ -158,7 +158,7 @@ export default function LayersChapter({ t }: { t: Dict["layers"] }) {
           <div className="relative min-h-[200px]">
             <div className="layers-copy-1 md:absolute md:inset-0">
               <p className="micro-label mb-5">{t.chapter}</p>
-              <h2 className="voice-moment text-3xl sm:text-4xl leading-[1.15] text-paper-hi">
+              <h2 className="voice-moment text-heading leading-[1.15] text-paper-hi">
                 {t.h1a}
                 <br />
                 {t.h1b}
@@ -167,7 +167,7 @@ export default function LayersChapter({ t }: { t: Dict["layers"] }) {
             </div>
             <div className="layers-copy-2 md:absolute md:inset-0 md:opacity-0 mt-10 md:mt-0">
               <p className="micro-label mb-5">{t.mergeLabel}</p>
-              <h2 className="voice-moment text-3xl sm:text-4xl leading-[1.15] text-paper-hi">
+              <h2 className="voice-moment text-heading leading-[1.15] text-paper-hi">
                 {t.h2a}
                 <br />
                 {t.h2b}

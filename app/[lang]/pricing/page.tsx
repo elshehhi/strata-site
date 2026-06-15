@@ -41,7 +41,7 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
 
         <div className="relative mx-auto max-w-5xl">
           <p className="micro-label mb-5">{t.register}</p>
-          <h1 className="voice-moment text-4xl sm:text-6xl text-paper-hi leading-[1.08] max-w-2xl">
+          <h1 className="voice-moment text-heading sm:text-display text-paper-hi leading-[1.08] max-w-2xl">
             {t.h1a}
             <br />
             {t.h1b}
@@ -84,7 +84,7 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                     </span>
                   )}
 
-                  <h2 className="voice-moment text-2xl text-paper-hi">{s.name}</h2>
+                  <h2 className="voice-moment text-title text-paper-hi">{s.name}</h2>
                   <p className="mt-3 text-sm text-paper-mid leading-relaxed min-h-[40px]">
                     {s.reading}
                   </p>
@@ -97,10 +97,10 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                     </span>
                   </p>
                   <p className="mt-3 flex items-baseline gap-2.5">
-                    <span className="voice-truth text-xl text-paper-low/70 line-through decoration-rust/60 decoration-1">
+                    <span className="voice-truth text-lead text-paper-low/70 line-through decoration-rust/60 decoration-1">
                       ${tier.regularMonthly}
                     </span>
-                    <span className="voice-moment text-5xl text-paper-hi">${tier.priceMonthly}</span>
+                    <span className="voice-moment text-feature text-paper-hi">${tier.priceMonthly}</span>
                     <span className="voice-truth text-caption text-paper-low">{t.perMonth}</span>
                   </p>
                   <p className="voice-truth mt-2 text-caption text-dawn">{d.nine.annual[tier.id]}</p>

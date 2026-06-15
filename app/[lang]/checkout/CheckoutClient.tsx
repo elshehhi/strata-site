@@ -66,7 +66,7 @@ export default function CheckoutClient({
           <span className="wordmark text-caption text-paper-mid">Strata</span>
         </div>
         <p className="micro-label mb-2">{t.yourKit}</p>
-        <h1 className="voice-moment text-3xl text-paper-hi">{tierT.name}</h1>
+        <h1 className="voice-moment text-heading text-paper-hi">{tierT.name}</h1>
         <p className="mt-3 text-sm text-paper-mid leading-relaxed">{tierT.reading}</p>
         <div className="depth-ribbon h-px my-7" dir="ltr" />
         <ul className="space-y-3">
@@ -79,7 +79,7 @@ export default function CheckoutClient({
             </li>
           ))}
         </ul>
-        <p className="voice-moment mt-8 text-3xl text-paper-hi">
+        <p className="voice-moment mt-8 text-heading text-paper-hi">
           ${billing === "annual" ? tier.priceAnnual : tier.priceMonthly}
           <span className="voice-truth text-caption text-paper-low ms-2">
             {billing === "annual" ? t.perYear : t.perMonth}
@@ -119,7 +119,7 @@ export default function CheckoutClient({
         ) : (
           <div className="h-full min-h-[520px] flex flex-col items-center justify-center text-center px-8">
             <StrataMark size={30} />
-            <h2 className="voice-moment text-2xl text-paper-hi mt-7">{t.closedH}</h2>
+            <h2 className="voice-moment text-title text-paper-hi mt-7">{t.closedH}</h2>
             <p className="mt-4 text-sm text-paper-mid max-w-sm leading-relaxed">
               {failed ? t.closedFail : t.closedDemo}
             </p>

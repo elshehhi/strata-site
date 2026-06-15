@@ -54,7 +54,7 @@ export default async function SuccessPage({
           </div>
 
           <p className="micro-label mt-10 mb-4">{paid ? t.confirmed : t.welcome}</p>
-          <h1 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
+          <h1 className="voice-moment text-heading sm:text-feature text-paper-hi leading-tight">
             {t.h(paid ? tierName : null)}
           </h1>
           <p className="mt-6 text-paper-mid text-body leading-relaxed max-w-md mx-auto">

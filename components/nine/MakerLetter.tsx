@@ -25,7 +25,7 @@ export default function MakerLetter({ t }: { t: Dict["nine"] }) {
           <StrataMark size={20} />
           <p className="micro-label">{t.letterLabel}</p>
         </div>
-        <p className="voice-moment text-xl text-paper-hi">{t.letter1}</p>
+        <p className="voice-moment text-lead text-paper-hi">{t.letter1}</p>
         <p className="mt-5 text-body text-paper-mid leading-relaxed">{t.letter2}</p>
         <p className="mt-4 text-body text-paper-mid leading-relaxed">{t.letter3}</p>
         <p className="mt-4 text-body text-dawn/90 leading-relaxed">{t.letterRise}</p>

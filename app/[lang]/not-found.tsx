@@ -30,12 +30,12 @@ export default function NotFound() {
       <p className="voice-truth mt-10 text-caption tracking-micro text-paper-low">{ar.code}</p>
 
       <div dir="rtl" lang="ar" className="mt-6">
-        <h1 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">{ar.h}</h1>
+        <h1 className="voice-moment text-heading sm:text-feature text-paper-hi leading-tight">{ar.h}</h1>
         <p className="mt-4 text-paper-mid text-body">{ar.p}</p>
       </div>
 
       <div dir="ltr" lang="en" className="mt-8 opacity-70">
-        <h2 className="voice-moment text-2xl text-paper-mid leading-tight">{en.h}</h2>
+        <h2 className="voice-moment text-title text-paper-mid leading-tight">{en.h}</h2>
         <p className="mt-2 text-paper-low text-sm">{en.p}</p>
       </div>
 

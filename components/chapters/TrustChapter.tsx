@@ -40,7 +40,7 @@ export default function TrustChapter({ t }: { t: Dict["trust"] }) {
           initial="hidden"
           whileInView="shown"
           viewport={{ once: true, amount: 0.6 }}
-          className="voice-moment text-4xl sm:text-6xl leading-[1.1] text-paper-hi"
+          className="voice-moment text-heading sm:text-display leading-[1.1] text-paper-hi"
         >
           {t.h}
         </motion.h2>

@@ -64,7 +64,7 @@ export default function FoundingCountdown({
         {cells.map(([n, label], i) => (
           <div key={label} className="flex items-center gap-1.5">
             <div className="flex min-w-[3.1rem] flex-col items-center rounded-md bg-ink-1 hairline-strong px-2.5 py-2">
-              <span className="voice-truth text-2xl tabular-nums text-paper-hi">
+              <span className="voice-truth text-title tabular-nums text-paper-hi">
                 {String(n).padStart(2, "0")}
               </span>
               <span className="voice-truth mt-0.5 text-micro uppercase tracking-micro text-paper-low">
@@ -72,7 +72,7 @@ export default function FoundingCountdown({
               </span>
             </div>
             {i < cells.length - 1 && (
-              <span className="voice-truth self-start pt-2 text-lg text-dawn/50">:</span>
+              <span className="voice-truth self-start pt-2 text-lead text-dawn/50">:</span>
             )}
           </div>
         ))}

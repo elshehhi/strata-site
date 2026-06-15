@@ -29,7 +29,7 @@ export default function AccountPage({ params }: { params: { lang: string } }) {
             <StrataMark size={30} />
           </div>
           <p className="micro-label mt-10 mb-4 text-center">{t.label}</p>
-          <h1 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight text-center">
+          <h1 className="voice-moment text-heading sm:text-feature text-paper-hi leading-tight text-center">
             {t.h}
           </h1>
           <p className="mt-6 text-paper-mid text-body leading-relaxed text-center max-w-md mx-auto">

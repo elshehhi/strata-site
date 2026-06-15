@@ -51,7 +51,7 @@ export default function ClosingChapter({
             />
           </div>
           <div className="mt-6 flex items-baseline justify-between">
-            <span className="voice-moment text-lg text-paper-hi">{t.printTitle}</span>
+            <span className="voice-moment text-lead text-paper-hi">{t.printTitle}</span>
             <span className="voice-truth text-micro tracking-micro uppercase text-paper-low">
               {t.printChip}
             </span>
@@ -67,7 +67,7 @@ export default function ClosingChapter({
           viewport={{ once: true, amount: 0.5 }}
           className="mt-32 text-center"
         >
-          <h2 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
+          <h2 className="voice-moment text-heading sm:text-feature text-paper-hi leading-tight">
             {t.h}
           </h2>
           <p className="mt-5 text-paper-mid text-body">{t.p}</p>
@@ -91,7 +91,7 @@ export default function ClosingChapter({
                     : "hairline"
                 }`}
               >
-                <p className="voice-moment text-xl text-paper-hi">{tiersT[tier.id].name}</p>
+                <p className="voice-moment text-lead text-paper-hi">{tiersT[tier.id].name}</p>
                 <p className="voice-truth mt-2 text-caption text-paper-low">
                   {t.from} <span className="text-dawn">${tier.priceMonthly}</span> {t.perMonth}
                 </p>

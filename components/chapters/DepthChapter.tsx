@@ -31,7 +31,7 @@ export default function DepthChapter({ t }: { t: Dict["depth"] }) {
           viewport={{ once: true, amount: 0.5 }}
         >
           <p className="micro-label mb-5">{t.chapter}</p>
-          <h2 className="voice-moment text-4xl sm:text-5xl leading-[1.12] text-paper-hi max-w-3xl">
+          <h2 className="voice-moment text-heading sm:text-feature leading-[1.12] text-paper-hi max-w-3xl">
             {t.h1a}
             <br />
             {t.h1b}
@@ -77,7 +77,7 @@ export default function DepthChapter({ t }: { t: Dict["depth"] }) {
             whileInView="shown"
             viewport={{ once: true, amount: 0.4 }}
           >
-            <h3 className="voice-moment text-2xl sm:text-3xl text-paper-hi leading-snug">
+            <h3 className="voice-moment text-title sm:text-heading text-paper-hi leading-snug">
               {t.h2}
             </h3>
             <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.p}</p>

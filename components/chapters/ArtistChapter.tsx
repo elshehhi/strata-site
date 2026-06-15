@@ -185,21 +185,21 @@ export default function ArtistChapter({ t }: { t: Dict["artist"] }) {
         {/* the readings of each beat */}
         <div className="relative mt-16 w-full max-w-xl text-center min-h-[150px]">
           <div className="ac-copy-1 md:absolute md:inset-x-0">
-            <h2 className="voice-moment text-3xl sm:text-4xl text-paper-hi leading-tight">
+            <h2 className="voice-moment text-heading text-paper-hi leading-tight">
               {t.b1h}
             </h2>
             <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.b1p}</p>
           </div>
 
           <div className="ac-copy-2 md:absolute md:inset-x-0 md:opacity-0">
-            <h2 className="voice-moment text-3xl sm:text-4xl text-paper-hi leading-tight">
+            <h2 className="voice-moment text-heading text-paper-hi leading-tight">
               {t.b2h}
             </h2>
             <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.b2p}</p>
           </div>
 
           <div className="ac-copy-3 md:absolute md:inset-x-0 md:opacity-0">
-            <h2 className="voice-moment text-3xl sm:text-4xl text-paper-hi leading-tight">
+            <h2 className="voice-moment text-heading text-paper-hi leading-tight">
               {t.b3h}
             </h2>
             <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.b3p}</p>
