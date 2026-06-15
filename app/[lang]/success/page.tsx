@@ -57,7 +57,7 @@ export default async function SuccessPage({
           <h1 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
             {t.h(paid ? tierName : null)}
           </h1>
-          <p className="mt-6 text-paper-mid text-[15px] leading-relaxed max-w-md mx-auto">
+          <p className="mt-6 text-paper-mid text-body leading-relaxed max-w-md mx-auto">
             {email ? t.bodyWithEmail(email) : t.body}
           </p>
 
@@ -70,7 +70,7 @@ export default async function SuccessPage({
               className="w-full h-auto"
             />
           </div>
-          <p className="voice-truth mt-5 text-[10px] tracking-micro uppercase text-paper-low">
+          <p className="voice-truth mt-5 text-micro tracking-micro uppercase text-paper-low">
             {t.caption}
           </p>
 
@@ -85,7 +85,7 @@ export default async function SuccessPage({
           <p className="mt-8">
             <a
               href="mailto:a.elshehhi@gmail.com?subject=STRATA%20activation"
-              className="text-[12px] text-paper-low hover:text-paper-mid transition-colors duration-fast"
+              className="text-caption text-paper-low hover:text-paper-mid transition-colors duration-fast"
             >
               {t.help}
             </a>

@@ -51,7 +51,7 @@ export default function TrustChapter({ t }: { t: Dict["trust"] }) {
           initial="hidden"
           whileInView="shown"
           viewport={{ once: true, amount: 0.6 }}
-          className="mt-7 text-paper-mid text-[15px] max-w-lg mx-auto leading-relaxed"
+          className="mt-7 text-paper-mid text-body max-w-lg mx-auto leading-relaxed"
         >
           {t.p}
         </motion.p>
@@ -67,7 +67,7 @@ export default function TrustChapter({ t }: { t: Dict["trust"] }) {
               viewport={{ once: true, amount: 0.5 }}
               className="bg-ink-1 p-8"
             >
-              <p className="voice-truth text-[11px] tracking-micro text-sage mb-4">{p.k}</p>
+              <p className="voice-truth text-caption tracking-micro text-sage mb-4">{p.k}</p>
               <p className="text-paper-mid text-sm leading-relaxed">{p.line}</p>
             </motion.div>
           ))}

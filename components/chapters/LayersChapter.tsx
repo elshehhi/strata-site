@@ -123,7 +123,7 @@ export default function LayersChapter({ t }: { t: Dict["layers"] }) {
                 sizes="420px"
                 className="object-cover rounded-lg"
               />
-              <span className="plate-label voice-truth absolute -right-3 top-5 translate-x-full text-[11px] text-far hidden md:block" dir="auto">
+              <span className="plate-label voice-truth absolute -right-3 top-5 translate-x-full text-caption text-far hidden md:block" dir="auto">
                 {t.farLabel}
               </span>
             </div>
@@ -135,7 +135,7 @@ export default function LayersChapter({ t }: { t: Dict["layers"] }) {
                 sizes="420px"
                 className="object-cover rounded-lg"
               />
-              <span className="plate-label voice-truth absolute -right-3 bottom-5 translate-x-full text-[11px] text-dawn hidden md:block" dir="auto">
+              <span className="plate-label voice-truth absolute -right-3 bottom-5 translate-x-full text-caption text-dawn hidden md:block" dir="auto">
                 {t.nearLabel}
               </span>
             </div>
@@ -163,7 +163,7 @@ export default function LayersChapter({ t }: { t: Dict["layers"] }) {
                 <br />
                 {t.h1b}
               </h2>
-              <p className="mt-6 text-paper-mid leading-relaxed text-[15px]">{t.p1}</p>
+              <p className="mt-6 text-paper-mid leading-relaxed text-body">{t.p1}</p>
             </div>
             <div className="layers-copy-2 md:absolute md:inset-0 md:opacity-0 mt-10 md:mt-0">
               <p className="micro-label mb-5">{t.mergeLabel}</p>
@@ -172,8 +172,8 @@ export default function LayersChapter({ t }: { t: Dict["layers"] }) {
                 <br />
                 {t.h2b}
               </h2>
-              <p className="mt-6 text-paper-mid leading-relaxed text-[15px]">{t.p2}</p>
-              <p className="voice-truth mt-6 text-[11px] tracking-micro uppercase text-paper-low">
+              <p className="mt-6 text-paper-mid leading-relaxed text-body">{t.p2}</p>
+              <p className="voice-truth mt-6 text-caption tracking-micro uppercase text-paper-low">
                 {t.note}
               </p>
             </div>

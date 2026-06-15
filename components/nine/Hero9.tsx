@@ -36,12 +36,12 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
             variants={line}
             initial="hidden"
             animate="shown"
-            className="wordmark text-[12px] text-paper-mid mb-9"
+            className="wordmark text-caption text-paper-mid mb-9"
           >
             Strata
           </motion.p>
 
-          <h1 className="voice-moment text-[clamp(2.1rem,5vw,3.9rem)] leading-[1.14] text-paper-hi">
+          <h1 className="voice-moment text-display leading-[1.14] text-paper-hi">
             <motion.span custom={1} variants={line} initial="hidden" animate="shown" className="block">
               {t.heroL1}
             </motion.span>
@@ -65,7 +65,7 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
             variants={line}
             initial="hidden"
             animate="shown"
-            className="mt-7 text-[15px] text-paper-mid max-w-md leading-relaxed"
+            className="mt-7 text-body text-paper-mid max-w-md leading-relaxed"
           >
             {t.heroStory}
           </motion.p>
@@ -78,7 +78,7 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
             animate="shown"
             className="mt-8"
           >
-            <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-3.5 py-1.5 text-[14px] font-medium tracking-tight text-[#1a1410]">
+            <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-3.5 py-1.5 text-body font-medium tracking-tight text-[#1a1410]">
               {t.heroOfferLabel}
             </span>
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -90,7 +90,7 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
                 <FoundingCountdown deadline={FOUNDING_DEADLINE} t={t.countdown} compact />
               )}
             </div>
-            <p className="voice-truth mt-3 text-[11px] text-paper-low leading-relaxed">
+            <p className="voice-truth mt-3 text-caption text-paper-low leading-relaxed">
               {t.heroOfferSub}
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
             variants={line}
             initial="hidden"
             animate="shown"
-            className="mt-7 text-[14px] text-paper-mid max-w-md leading-relaxed"
+            className="mt-7 text-body text-paper-mid max-w-md leading-relaxed"
           >
             {t.drag}
           </motion.p>
@@ -110,7 +110,7 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
             variants={line}
             initial="hidden"
             animate="shown"
-            className="voice-truth mt-5 text-[11px] tracking-micro uppercase text-paper-low"
+            className="voice-truth mt-5 text-caption tracking-micro uppercase text-paper-low"
           >
             {t.trust}
           </motion.p>
@@ -132,7 +132,7 @@ export default function Hero9({ t, lang }: { t: Dict["nine"]; lang: Locale }) {
             aspectClass="aspect-[2/3]"
             priority
           />
-          <p className="voice-truth mt-4 text-[10px] leading-relaxed text-paper-low">
+          <p className="voice-truth mt-4 text-caption leading-relaxed text-paper-low">
             {t.credit}
           </p>
         </motion.div>

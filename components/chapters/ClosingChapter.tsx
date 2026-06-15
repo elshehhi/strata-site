@@ -52,7 +52,7 @@ export default function ClosingChapter({
           </div>
           <div className="mt-6 flex items-baseline justify-between">
             <span className="voice-moment text-lg text-paper-hi">{t.printTitle}</span>
-            <span className="voice-truth text-[10px] tracking-micro uppercase text-paper-low">
+            <span className="voice-truth text-micro tracking-micro uppercase text-paper-low">
               {t.printChip}
             </span>
           </div>
@@ -70,7 +70,7 @@ export default function ClosingChapter({
           <h2 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
             {t.h}
           </h2>
-          <p className="mt-5 text-paper-mid text-[15px]">{t.p}</p>
+          <p className="mt-5 text-paper-mid text-body">{t.p}</p>
         </motion.div>
 
         <div className="mt-14 grid sm:grid-cols-3 gap-4">
@@ -92,10 +92,10 @@ export default function ClosingChapter({
                 }`}
               >
                 <p className="voice-moment text-xl text-paper-hi">{tiersT[tier.id].name}</p>
-                <p className="voice-truth mt-2 text-[12px] text-paper-low">
+                <p className="voice-truth mt-2 text-caption text-paper-low">
                   {t.from} <span className="text-dawn">${tier.priceMonthly}</span> {t.perMonth}
                 </p>
-                <p className="mt-4 text-[13px] text-paper-mid leading-relaxed">
+                <p className="mt-4 text-sm text-paper-mid leading-relaxed">
                   {tiersT[tier.id].reading}
                 </p>
               </Link>
@@ -121,10 +121,10 @@ export default function ClosingChapter({
         <footer className="mt-36 pt-10 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <StrataMark size={22} />
-            <span className="wordmark text-[11px] text-paper-mid">Strata</span>
+            <span className="wordmark text-caption text-paper-mid">Strata</span>
           </div>
-          <p className="voice-truth text-[11px] text-paper-low text-center">{t.credit}</p>
-          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-[12px] text-paper-low">
+          <p className="voice-truth text-caption text-paper-low text-center">{t.credit}</p>
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-caption text-paper-low">
             <Link
               href={`/${lang}/download`}
               className="hover:text-paper-mid transition-colors duration-fast"

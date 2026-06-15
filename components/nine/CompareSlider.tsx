@@ -100,10 +100,10 @@ export default function CompareSlider({
       </div>
 
       {/* plates */}
-      <span className="voice-truth absolute top-3 left-3 z-10 text-[9px] tracking-micro uppercase px-2.5 py-1.5 rounded glass text-paper-hi">
+      <span className="voice-truth absolute top-3 left-3 z-10 text-micro tracking-micro uppercase px-2.5 py-1.5 rounded glass text-paper-hi">
         {beforeLabel}
       </span>
-      <span className="voice-truth absolute top-3 right-3 z-10 text-[9px] tracking-micro uppercase px-2.5 py-1.5 rounded glass text-dawn-hi">
+      <span className="voice-truth absolute top-3 right-3 z-10 text-micro tracking-micro uppercase px-2.5 py-1.5 rounded glass text-dawn-hi">
         {afterLabel}
       </span>
 
@@ -122,7 +122,7 @@ export default function CompareSlider({
         aria-valuemax={100}
         aria-valuenow={Math.round(pos)}
         onKeyDown={onKey}
-        className={`absolute z-20 top-1/2 -translate-y-1/2 -translate-x-1/2 h-11 w-11 rounded-full glass flex items-center justify-center gap-1 text-paper-hi text-[13px] cursor-ew-resize ${
+        className={`absolute z-20 top-1/2 -translate-y-1/2 -translate-x-1/2 h-11 w-11 rounded-full glass flex items-center justify-center gap-1 text-paper-hi text-sm cursor-ew-resize ${
           touched ? "" : "breathe-once"
         }`}
         style={{ left: `${pos}%` }}

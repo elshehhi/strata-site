@@ -52,7 +52,7 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
             <br />
             {t.h1b}
           </h1>
-          <p className="mt-6 text-paper-mid text-[15px] max-w-lg leading-relaxed">{t.p}</p>
+          <p className="mt-6 text-paper-mid text-body max-w-lg leading-relaxed">{t.p}</p>
 
           <div className="mt-16 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-start">
             {/* the build cards */}
@@ -62,9 +62,9 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
                 <div className="flex items-center justify-between">
                   <div>
                     <h2 className="voice-moment text-2xl text-paper-hi">{t.winTitle}</h2>
-                    <p className="voice-truth mt-2 text-[11px] text-paper-low">{t.winSpec}</p>
+                    <p className="voice-truth mt-2 text-caption text-paper-low">{t.winSpec}</p>
                   </div>
-                  <span className="voice-truth text-[10px] tracking-micro uppercase px-3 py-1.5 rounded bg-ink-2 border border-hairline text-dawn">
+                  <span className="voice-truth text-micro tracking-micro uppercase px-3 py-1.5 rounded bg-ink-2 border border-hairline text-dawn">
                     {t.version}
                   </span>
                 </div>
@@ -75,13 +75,13 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
                       {t.get}
                       <span aria-hidden>↓</span>
                     </a>
-                    <p className="mt-5 text-[12px] text-paper-low leading-relaxed max-w-md">
+                    <p className="mt-5 text-caption text-paper-low leading-relaxed max-w-md">
                       {t.smartscreen}
                     </p>
                   </div>
                 ) : (
                   <div>
-                    <p className="text-[13px] text-paper-mid leading-relaxed">{t.notUp}</p>
+                    <p className="text-sm text-paper-mid leading-relaxed">{t.notUp}</p>
                     <a
                       href="mailto:a.elshehhi@gmail.com?subject=STRATA%20build"
                       className="ghost mt-5"
@@ -95,7 +95,7 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
               {/* macOS — honest */}
               <div className="rounded-lg bg-ink-1 hairline p-8">
                 <h2 className="voice-moment text-xl text-paper-mid">{t.macTitle}</h2>
-                <p className="mt-3 text-[13px] text-paper-low leading-relaxed">{t.macLine}</p>
+                <p className="mt-3 text-sm text-paper-low leading-relaxed">{t.macLine}</p>
               </div>
 
               {/* requirements */}
@@ -103,7 +103,7 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
                 <p className="micro-label mb-5">{t.reqTitle}</p>
                 <ul className="space-y-3">
                   {t.reqs.map((r) => (
-                    <li key={r} className="flex gap-3 text-[13px] text-paper-mid leading-snug">
+                    <li key={r} className="flex gap-3 text-sm text-paper-mid leading-snug">
                       <span className="text-sage mt-[1px]" aria-hidden>
                         —
                       </span>
@@ -132,8 +132,8 @@ export default function DownloadPage({ params }: { params: { lang: string } }) {
                 </div>
                 <ol className="space-y-3">
                   {t.afterSteps.map((s, i) => (
-                    <li key={s} className="flex gap-4 text-[13px] text-paper-mid leading-snug">
-                      <span className="voice-truth text-[11px] text-dawn mt-[1px]">{i + 1}</span>
+                    <li key={s} className="flex gap-4 text-sm text-paper-mid leading-snug">
+                      <span className="voice-truth text-caption text-dawn mt-[1px]">{i + 1}</span>
                       {s}
                     </li>
                   ))}

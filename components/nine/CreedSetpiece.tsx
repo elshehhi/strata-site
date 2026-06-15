@@ -110,7 +110,7 @@ export default function CreedSetpiece({
       <div ref={root} className="relative overflow-hidden">
         <div className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
           <p className="micro-label mb-4">{t.creedLabel}</p>
-          <p className="voice-truth text-[12px] text-far mb-10">{t.depthLine}</p>
+          <p className="voice-truth text-caption text-far mb-10">{t.depthLine}</p>
 
           <div
             className="relative w-full max-w-[330px] sm:max-w-[360px] aspect-[2/3]"
@@ -125,7 +125,7 @@ export default function CreedSetpiece({
                 className="object-cover rounded-lg"
               />
               <span
-                className="cs-label voice-truth absolute -right-3 top-6 translate-x-full text-[10px] text-far hidden md:block"
+                className="cs-label voice-truth absolute -right-3 top-6 translate-x-full text-caption text-far hidden md:block"
                 dir="auto"
               >
                 {layers.farLabel}
@@ -140,7 +140,7 @@ export default function CreedSetpiece({
                 className="object-cover rounded-lg"
               />
               <span
-                className="cs-label voice-truth absolute -right-3 bottom-6 translate-x-full text-[10px] text-dawn hidden md:block"
+                className="cs-label voice-truth absolute -right-3 bottom-6 translate-x-full text-caption text-dawn hidden md:block"
                 dir="auto"
               >
                 {layers.nearLabel}
@@ -163,7 +163,7 @@ export default function CreedSetpiece({
 
           {/* the creed — lands in the opening between the planes */}
           <div className="cs-creed md:opacity-0 mt-12 text-center pointer-events-none">
-            <h2 className="voice-moment text-[clamp(2rem,4.6vw,3.4rem)] leading-[1.12] text-paper-hi">
+            <h2 className="voice-moment text-display leading-[1.12] text-paper-hi">
               {t.creed1}
               <br />
               <span className="text-dawn-hi">{t.creed2}</span>
@@ -174,7 +174,7 @@ export default function CreedSetpiece({
 
       {/* after the merge: the reading, and the instrument's own proposal */}
       <div className="relative px-6 pb-36">
-        <p className="mx-auto max-w-lg text-center text-paper-mid text-[15px] leading-relaxed">
+        <p className="mx-auto max-w-lg text-center text-paper-mid text-body leading-relaxed">
           {t.creedBody}
         </p>
         <div className="mt-12 mx-auto max-w-3xl ridge-clip overflow-hidden">

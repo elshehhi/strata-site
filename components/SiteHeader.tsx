@@ -36,7 +36,7 @@ export default function SiteHeader({ lang, t }: { lang: Locale; t: Dict["header"
   const other: Locale = lang === "ar" ? "en" : "ar";
   const switchedPath = pathname?.replace(new RegExp(`^/${lang}(?=/|$)`), `/${other}`) ?? `/${other}`;
 
-  const linkBase = "text-[13px] text-paper-mid hover:text-paper-hi transition-colors duration-fast";
+  const linkBase = "text-sm text-paper-mid hover:text-paper-hi transition-colors duration-fast";
 
   return (
     <header
@@ -47,7 +47,7 @@ export default function SiteHeader({ lang, t }: { lang: Locale; t: Dict["header"
       <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center gap-3 group">
           <StrataMark size={24} />
-          <span className="wordmark text-[13px] text-paper-hi group-hover:text-dawn-hi transition-colors duration-fast">
+          <span className="wordmark text-sm text-paper-hi group-hover:text-dawn-hi transition-colors duration-fast">
             Strata
           </span>
         </Link>
@@ -60,20 +60,20 @@ export default function SiteHeader({ lang, t }: { lang: Locale; t: Dict["header"
           <Link
             href={switchedPath}
             hrefLang={other}
-            className="voice-truth text-[11px] text-paper-low hover:text-paper-mid transition-colors duration-fast"
+            className="voice-truth text-caption text-paper-low hover:text-paper-mid transition-colors duration-fast"
           >
             {t.switchLabel}
           </Link>
           <Link
             href={`/${lang}/pricing`}
-            className={`text-[13px] px-4 py-2 rounded transition-all duration-med ease-strata ${
+            className={`text-sm px-4 py-2 rounded transition-all duration-med ease-strata ${
               walked
                 ? "bg-dawn text-[#1a1410] font-medium hover:bg-dawn-hi"
                 : "border border-hairline-strong text-paper-mid hover:text-paper-hi"
             }`}
           >
             {t.get}
-            <span className={`voice-truth ms-2 text-[10px] ${walked ? "opacity-70" : "text-paper-low"}`}>
+            <span className={`voice-truth ms-2 text-caption ${walked ? "opacity-70" : "text-paper-low"}`}>
               {t.fromPrice}
             </span>
           </Link>
@@ -113,16 +113,16 @@ export default function SiteHeader({ lang, t }: { lang: Locale; t: Dict["header"
           <Link
             href={switchedPath}
             hrefLang={other}
-            className="voice-truth text-[12px] text-paper-low hover:text-paper-mid transition-colors duration-fast py-3 border-t border-hairline/60"
+            className="voice-truth text-caption text-paper-low hover:text-paper-mid transition-colors duration-fast py-3 border-t border-hairline/60"
           >
             {t.switchLabel}
           </Link>
           <Link
             href={`/${lang}/pricing`}
-            className="mt-4 text-[14px] text-center px-4 py-3 rounded bg-dawn text-[#1a1410] font-medium hover:bg-dawn-hi transition-all duration-med ease-strata"
+            className="mt-4 text-body text-center px-4 py-3 rounded bg-dawn text-[#1a1410] font-medium hover:bg-dawn-hi transition-all duration-med ease-strata"
           >
             {t.get}
-            <span className="voice-truth ms-2 text-[11px] opacity-70">{t.fromPrice}</span>
+            <span className="voice-truth ms-2 text-caption opacity-70">{t.fromPrice}</span>
           </Link>
         </nav>
       )}

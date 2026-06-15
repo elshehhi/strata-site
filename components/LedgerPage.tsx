@@ -39,8 +39,8 @@ export default function LedgerPage({
             <p className="micro-label">{label}</p>
           </div>
           <h1 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">{title}</h1>
-          <p className="voice-truth mt-4 text-[11px] text-paper-low">{updated}</p>
-          <p className="mt-8 text-paper-mid text-[15px] leading-relaxed">{intro}</p>
+          <p className="voice-truth mt-4 text-caption text-paper-low">{updated}</p>
+          <p className="mt-8 text-paper-mid text-body leading-relaxed">{intro}</p>
 
           <div className="depth-ribbon h-px my-12" dir="ltr" />
 
@@ -48,14 +48,14 @@ export default function LedgerPage({
             {sections.map((s, i) => (
               <section key={s.h}>
                 <div className="flex items-baseline gap-4 mb-4">
-                  <span className="voice-truth text-[11px] text-dawn">
+                  <span className="voice-truth text-caption text-dawn">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h2 className="voice-moment text-xl sm:text-2xl text-paper-hi">{s.h}</h2>
                 </div>
                 <div className="space-y-3 ps-9">
                   {s.body.map((p) => (
-                    <p key={p} className="text-[14px] text-paper-mid leading-relaxed">
+                    <p key={p} className="text-body text-paper-mid leading-relaxed">
                       {p}
                     </p>
                   ))}
@@ -67,7 +67,7 @@ export default function LedgerPage({
           <div className="mt-16 pt-8 border-t border-hairline">
             <a
               href="mailto:a.elshehhi@gmail.com?subject=STRATA"
-              className="voice-truth text-[12px] text-paper-low hover:text-paper-mid transition-colors duration-fast"
+              className="voice-truth text-caption text-paper-low hover:text-paper-mid transition-colors duration-fast"
             >
               a.elshehhi@gmail.com
             </a>

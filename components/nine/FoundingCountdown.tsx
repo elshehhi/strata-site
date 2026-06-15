@@ -48,7 +48,7 @@ export default function FoundingCountdown({
   if (compact) {
     const pad = (n: number) => String(n).padStart(2, "0");
     return (
-      <span className="voice-truth inline-flex items-center gap-2 text-[11px] text-paper-low">
+      <span className="voice-truth inline-flex items-center gap-2 text-caption text-paper-low">
         <span className="text-dawn">{t.label}</span>
         <span className="tabular-nums text-paper-hi" dir="ltr">
           {cells.map(([n]) => pad(n)).join(":")}
@@ -67,7 +67,7 @@ export default function FoundingCountdown({
               <span className="voice-truth text-2xl tabular-nums text-paper-hi">
                 {String(n).padStart(2, "0")}
               </span>
-              <span className="voice-truth mt-0.5 text-[9px] uppercase tracking-micro text-paper-low">
+              <span className="voice-truth mt-0.5 text-micro uppercase tracking-micro text-paper-low">
                 {label}
               </span>
             </div>

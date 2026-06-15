@@ -32,7 +32,7 @@ export default function AccountPage({ params }: { params: { lang: string } }) {
           <h1 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight text-center">
             {t.h}
           </h1>
-          <p className="mt-6 text-paper-mid text-[15px] leading-relaxed text-center max-w-md mx-auto">
+          <p className="mt-6 text-paper-mid text-body leading-relaxed text-center max-w-md mx-auto">
             {t.p}
           </p>
 
@@ -43,13 +43,13 @@ export default function AccountPage({ params }: { params: { lang: string } }) {
                   {t.open}
                   <span aria-hidden>{lang === "ar" ? "←" : "→"}</span>
                 </a>
-                <p className="voice-truth mt-6 text-[11px] text-paper-low leading-relaxed max-w-sm mx-auto">
+                <p className="voice-truth mt-6 text-caption text-paper-low leading-relaxed max-w-sm mx-auto">
                   {t.portalNote}
                 </p>
               </>
             ) : (
               <>
-                <p className="text-[13px] text-paper-mid leading-relaxed max-w-sm mx-auto">
+                <p className="text-sm text-paper-mid leading-relaxed max-w-sm mx-auto">
                   {t.notUp}
                 </p>
                 <a
@@ -67,7 +67,7 @@ export default function AccountPage({ params }: { params: { lang: string } }) {
             <p className="micro-label mb-5">{t.cancelTitle}</p>
             <ul className="space-y-3">
               {t.cancelLines.map((c) => (
-                <li key={c} className="flex gap-3 text-[13px] text-paper-mid leading-snug">
+                <li key={c} className="flex gap-3 text-sm text-paper-mid leading-snug">
                   <span className="text-sage mt-[1px]" aria-hidden>
                     —
                   </span>

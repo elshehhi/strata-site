@@ -46,10 +46,10 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
             <br />
             {t.h1b}
           </h1>
-          <p className="mt-6 text-paper-mid text-[15px] max-w-lg leading-relaxed">{t.p}</p>
+          <p className="mt-6 text-paper-mid text-body max-w-lg leading-relaxed">{t.p}</p>
 
           {/* founding-price frame — honest scarcity, stated before the cards */}
-          <p className="mt-6 max-w-xl border-s-2 border-dawn/40 ps-4 text-[13px] text-dawn-hi/90 leading-relaxed">
+          <p className="mt-6 max-w-xl border-s-2 border-dawn/40 ps-4 text-sm text-dawn-hi/90 leading-relaxed">
             {d.nine.foundingBanner}
           </p>
 
@@ -79,21 +79,21 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                   }`}
                 >
                   {tier.recommended && (
-                    <span className="voice-truth absolute -top-3 start-8 px-3 py-1 rounded bg-ink-2 border border-hairline-strong text-[10px] tracking-micro uppercase text-dawn">
+                    <span className="voice-truth absolute -top-3 start-8 px-3 py-1 rounded bg-ink-2 border border-hairline-strong text-micro tracking-micro uppercase text-dawn">
                       {t.badge}
                     </span>
                   )}
 
                   <h2 className="voice-moment text-2xl text-paper-hi">{s.name}</h2>
-                  <p className="mt-3 text-[13px] text-paper-mid leading-relaxed min-h-[40px]">
+                  <p className="mt-3 text-sm text-paper-mid leading-relaxed min-h-[40px]">
                     {s.reading}
                   </p>
 
                   {/* the discount is the headline — louder than the figure */}
                   <p className="mt-7">
-                    <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-[15px] font-medium tracking-tight text-[#1a1410]">
+                    <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-body font-medium tracking-tight text-[#1a1410]">
                       {d.nine.off[tier.id]}
-                      <span className="text-[11px] font-normal opacity-80">{d.nine.foundingBadge}</span>
+                      <span className="text-caption font-normal opacity-80">{d.nine.foundingBadge}</span>
                     </span>
                   </p>
                   <p className="mt-3 flex items-baseline gap-2.5">
@@ -101,16 +101,16 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                       ${tier.regularMonthly}
                     </span>
                     <span className="voice-moment text-5xl text-paper-hi">${tier.priceMonthly}</span>
-                    <span className="voice-truth text-[11px] text-paper-low">{t.perMonth}</span>
+                    <span className="voice-truth text-caption text-paper-low">{t.perMonth}</span>
                   </p>
-                  <p className="voice-truth mt-2 text-[11px] text-dawn">{d.nine.annual[tier.id]}</p>
-                  <p className="voice-truth mt-2 text-[10.5px] text-paper-low leading-relaxed">
+                  <p className="voice-truth mt-2 text-caption text-dawn">{d.nine.annual[tier.id]}</p>
+                  <p className="voice-truth mt-2 text-caption text-paper-low leading-relaxed">
                     {d.nine.foundingNote}
                   </p>
 
                   <ul className="mt-8 space-y-3 flex-1">
                     {s.carries.map((c) => (
-                      <li key={c} className="flex gap-3 text-[13px] text-paper-mid leading-snug">
+                      <li key={c} className="flex gap-3 text-sm text-paper-mid leading-snug">
                         <span className="text-sage mt-[1px]" aria-hidden>
                           —
                         </span>
@@ -120,7 +120,7 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                   </ul>
 
                   {s.edge && (
-                    <p className="voice-truth mt-6 text-[11px] text-paper-low leading-relaxed">
+                    <p className="voice-truth mt-6 text-caption text-paper-low leading-relaxed">
                       {s.edge}
                     </p>
                   )}
@@ -137,11 +137,11 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
                     />
                   </div>
                   {/* the price-lock — the strongest reason to buy now, not later */}
-                  <p className="voice-truth mt-5 text-[10.5px] text-dawn/85 leading-relaxed text-center">
+                  <p className="voice-truth mt-5 text-caption text-dawn/85 leading-relaxed text-center">
                     {d.nine.priceLock}
                   </p>
                   {/* the guarantees, welded to the price — not four chapters away */}
-                  <p className="voice-truth mt-2 text-[10px] text-paper-low leading-relaxed text-center">
+                  <p className="voice-truth mt-2 text-caption text-paper-low leading-relaxed text-center">
                     {d.nine.weld}
                   </p>
                 </div>
@@ -150,11 +150,11 @@ export default function PricingPage({ params }: { params: { lang: string } }) {
           </div>
 
           {d.nine.trialLine && (
-            <p className="voice-truth mt-10 text-[12px] text-sage text-center">
+            <p className="voice-truth mt-10 text-caption text-sage text-center">
               {d.nine.trialLine}
             </p>
           )}
-          <p className="voice-truth mt-6 text-[11px] text-paper-low text-center">{t.note}</p>
+          <p className="voice-truth mt-6 text-caption text-paper-low text-center">{t.note}</p>
         </div>
       </main>
     </>

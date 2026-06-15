@@ -9,10 +9,10 @@ export default function SiteFooter({ lang, t }: { lang: Locale; t: Dict["closing
       <div className="mx-auto max-w-5xl pt-10 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           <StrataMark size={22} />
-          <span className="wordmark text-[11px] text-paper-mid">Strata</span>
+          <span className="wordmark text-caption text-paper-mid">Strata</span>
         </div>
-        <p className="voice-truth text-[11px] text-paper-low text-center">{t.credit}</p>
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-[12px] text-paper-low">
+        <p className="voice-truth text-caption text-paper-low text-center">{t.credit}</p>
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-caption text-paper-low">
           <Link href={`/${lang}/download`} className="hover:text-paper-mid transition-colors duration-fast">
             {t.navDownload}
           </Link>

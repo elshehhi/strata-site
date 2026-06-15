@@ -47,7 +47,7 @@ export default function DepthChapter({ t }: { t: Dict["depth"] }) {
           className="mt-16"
         >
           <div className="depth-ribbon h-px w-full" dir="ltr" />
-          <div className="voice-truth mt-3 flex justify-between text-[11px] text-paper-low" dir="ltr">
+          <div className="voice-truth mt-3 flex justify-between text-caption text-paper-low" dir="ltr">
             <span className="text-dawn" dir="auto">{t.near}</span>
             <span dir="auto">{t.mid}</span>
             <span className="text-far" dir="auto">{t.far}</span>
@@ -80,8 +80,8 @@ export default function DepthChapter({ t }: { t: Dict["depth"] }) {
             <h3 className="voice-moment text-2xl sm:text-3xl text-paper-hi leading-snug">
               {t.h2}
             </h3>
-            <p className="mt-5 text-paper-mid text-[15px] leading-relaxed">{t.p}</p>
-            <p className="voice-truth mt-7 text-[11px] tracking-micro uppercase text-paper-low">
+            <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.p}</p>
+            <p className="voice-truth mt-7 text-caption tracking-micro uppercase text-paper-low">
               {t.note}
             </p>
           </motion.div>

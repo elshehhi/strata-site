@@ -26,10 +26,10 @@ export default function MakerLetter({ t }: { t: Dict["nine"] }) {
           <p className="micro-label">{t.letterLabel}</p>
         </div>
         <p className="voice-moment text-xl text-paper-hi">{t.letter1}</p>
-        <p className="mt-5 text-[14.5px] text-paper-mid leading-relaxed">{t.letter2}</p>
-        <p className="mt-4 text-[14.5px] text-paper-mid leading-relaxed">{t.letter3}</p>
-        <p className="mt-4 text-[14.5px] text-dawn/90 leading-relaxed">{t.letterRise}</p>
-        <p className="voice-moment mt-7 text-[15px] text-dawn-hi">{t.letterSign}</p>
+        <p className="mt-5 text-body text-paper-mid leading-relaxed">{t.letter2}</p>
+        <p className="mt-4 text-body text-paper-mid leading-relaxed">{t.letter3}</p>
+        <p className="mt-4 text-body text-dawn/90 leading-relaxed">{t.letterRise}</p>
+        <p className="voice-moment mt-7 text-body text-dawn-hi">{t.letterSign}</p>
       </div>
     </motion.div>
   );

@@ -49,12 +49,12 @@ export default function Hero({ t }: { t: Dict["hero"] }) {
         variants={line}
         initial="hidden"
         animate="shown"
-        className="wordmark text-[12px] sm:text-[13px] text-paper-mid mb-10"
+        className="wordmark text-caption sm:text-sm text-paper-mid mb-10"
       >
         Strata
       </motion.p>
 
-      <h1 className="voice-moment text-[clamp(2.6rem,7.2vw,5.6rem)] leading-[1.06] text-paper-hi max-w-5xl">
+      <h1 className="voice-moment text-display leading-[1.06] text-paper-hi max-w-5xl">
         <motion.span custom={1} variants={line} initial="hidden" animate="shown" className="block">
           {t.l1}
         </motion.span>
@@ -77,7 +77,7 @@ export default function Hero({ t }: { t: Dict["hero"] }) {
         variants={line}
         initial="hidden"
         animate="shown"
-        className="mt-9 text-[15px] sm:text-base text-paper-mid max-w-md"
+        className="mt-9 text-body sm:text-base text-paper-mid max-w-md"
       >
         {t.sub}
       </motion.p>
@@ -87,7 +87,7 @@ export default function Hero({ t }: { t: Dict["hero"] }) {
         variants={line}
         initial="hidden"
         animate="shown"
-        className="voice-truth mt-7 text-[11px] sm:text-xs tracking-micro uppercase text-paper-low"
+        className="voice-truth mt-7 text-caption sm:text-xs tracking-micro uppercase text-paper-low"
       >
         {t.trust}
       </motion.p>

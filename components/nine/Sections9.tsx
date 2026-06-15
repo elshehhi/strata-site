@@ -77,7 +77,7 @@ export function Provoke9({ t }: { t: Dict["nine"] }) {
           </p>
         </Rf>
         <Rf i={1}>
-          <p className="mt-7 text-paper-mid text-[16px] leading-relaxed max-w-xl mx-auto">
+          <p className="mt-7 text-paper-mid text-body leading-relaxed max-w-xl mx-auto">
             {t.provoke2}
           </p>
         </Rf>
@@ -103,7 +103,7 @@ export function How9({ t }: { t: Dict["nine"] }) {
           {t.steps.map((s, i) => (
             <R key={s} i={1 + i}>
               <div className="rounded-lg bg-ink-1 hairline p-7 h-full">
-                <p className="voice-truth text-[11px] text-dawn mb-4">
+                <p className="voice-truth text-caption text-dawn mb-4">
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <p className="voice-moment text-lg text-paper-hi leading-snug">{s}</p>
@@ -112,7 +112,7 @@ export function How9({ t }: { t: Dict["nine"] }) {
           ))}
         </div>
         <R i={4}>
-          <p className="voice-truth mt-10 text-center text-[12px] text-paper-mid leading-relaxed">
+          <p className="voice-truth mt-10 text-center text-caption text-paper-mid leading-relaxed">
             {t.howTrust1}
             <br />
             {t.howTrust2}
@@ -122,7 +122,7 @@ export function How9({ t }: { t: Dict["nine"] }) {
           <p className="micro-label mb-4">{t.notTitle}</p>
           <ul className="space-y-2.5">
             {t.nots.map((n) => (
-              <li key={n} className="flex gap-3 text-[13px] text-paper-mid leading-snug">
+              <li key={n} className="flex gap-3 text-sm text-paper-mid leading-snug">
                 <span className="text-rust mt-[1px]" aria-hidden>
                   —
                 </span>
@@ -147,13 +147,13 @@ export function Custody9({ t }: { t: Dict["nine"] }) {
           <h2 className="voice-moment text-3xl sm:text-5xl leading-[1.15] text-paper-hi">
             {t.custodyBig}
           </h2>
-          <p className="voice-truth mt-7 text-[12px] text-paper-mid leading-relaxed">
+          <p className="voice-truth mt-7 text-caption text-paper-mid leading-relaxed">
             {t.custodyLic}
           </p>
         </Rs>
         <R i={2} className="mt-12 rounded-lg bg-ink-1 hairline-strong p-8 text-start">
           <p className="voice-moment text-xl text-dawn-hi mb-4">{t.cancelQ}</p>
-          <p className="text-[14px] text-paper-mid leading-relaxed">{t.cancelA}</p>
+          <p className="text-body text-paper-mid leading-relaxed">{t.cancelA}</p>
         </R>
       </div>
     </section>
@@ -172,7 +172,7 @@ export function Manifesto9({ t }: { t: Dict["nine"] }) {
           {t.manifesto.map((m, i) => (
             <Rf key={m} i={1 + i}>
               <div className="flex items-baseline gap-5 py-4 border-b border-hairline">
-                <span className="voice-truth text-[11px] text-dawn">
+                <span className="voice-truth text-caption text-dawn">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="voice-moment text-xl sm:text-2xl text-paper-hi">{m}</p>
@@ -205,8 +205,8 @@ export function Pricing9({
           <h2 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
             {closing.h}
           </h2>
-          <p className="mt-5 text-paper-mid text-[15px]">{closing.p}</p>
-          <p className="mt-5 mx-auto max-w-xl text-[13px] text-dawn-hi/90 leading-relaxed">
+          <p className="mt-5 text-paper-mid text-body">{closing.p}</p>
+          <p className="mt-5 mx-auto max-w-xl text-sm text-dawn-hi/90 leading-relaxed">
             {t.foundingBanner}
           </p>
           {FOUNDING_DEADLINE && (
@@ -227,9 +227,9 @@ export function Pricing9({
                   <div className="relative rounded-lg bg-ink-1 hairline-strong p-8 sm:scale-[1.05] shadow-[0_0_44px_-20px_rgba(232,162,92,.28)]">
                     <p className="voice-moment text-2xl text-paper-hi">{s.name}</p>
                     <p className="mt-3">
-                      <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-[15px] font-medium tracking-tight text-[#1a1410]">
+                      <span className="voice-truth inline-flex items-center gap-2 rounded-full bg-dawn px-3.5 py-1.5 text-body font-medium tracking-tight text-[#1a1410]">
                         {t.off[tier.id]}
-                        <span className="text-[11px] font-normal opacity-80">
+                        <span className="text-caption font-normal opacity-80">
                           {t.foundingBadge}
                         </span>
                       </span>
@@ -241,12 +241,12 @@ export function Pricing9({
                       <span className="voice-moment text-5xl text-paper-hi">
                         ${tier.priceMonthly}
                       </span>
-                      <span className="voice-truth text-[11px] text-paper-low">
+                      <span className="voice-truth text-caption text-paper-low">
                         {closing.perMonth}
                       </span>
                     </p>
-                    <p className="voice-truth mt-2 text-[11px] text-dawn">{t.annual[tier.id]}</p>
-                    <p className="mt-4 text-[13px] text-paper-mid leading-relaxed">{s.reading}</p>
+                    <p className="voice-truth mt-2 text-caption text-dawn">{t.annual[tier.id]}</p>
+                    <p className="mt-4 text-sm text-paper-mid leading-relaxed">{s.reading}</p>
                     <div className="mt-6">
                       <BuyFlow
                         tier={tier}
@@ -257,10 +257,10 @@ export function Pricing9({
                         t={t.buy}
                       />
                     </div>
-                    <p className="voice-truth mt-4 text-[10.5px] text-dawn/85 leading-relaxed">
+                    <p className="voice-truth mt-4 text-caption text-dawn/85 leading-relaxed">
                       {t.priceLock}
                     </p>
-                    <p className="voice-truth mt-2 text-[10px] text-paper-low leading-relaxed">
+                    <p className="voice-truth mt-2 text-caption text-paper-low leading-relaxed">
                       {t.weld}
                     </p>
                   </div>
@@ -269,11 +269,11 @@ export function Pricing9({
                   <div className="rounded-lg bg-ink-1 hairline p-7 h-full flex flex-col">
                     <div className="flex items-center justify-between gap-2">
                       <p className="voice-moment text-lg text-paper-hi">{s.name}</p>
-                      <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-2.5 py-1 text-[12px] font-medium text-[#1a1410]">
+                      <span className="voice-truth inline-flex items-center rounded-full bg-dawn px-2.5 py-1 text-caption font-medium text-[#1a1410]">
                         {t.off[tier.id]}
                       </span>
                     </div>
-                    <p className="voice-truth mt-2 text-[12px] text-paper-low">
+                    <p className="voice-truth mt-2 text-caption text-paper-low">
                       <span className="line-through decoration-rust/60 me-1.5">
                         ${tier.regularMonthly}
                       </span>
@@ -283,10 +283,10 @@ export function Pricing9({
                       </span>
                       {t.annual[tier.id]}
                     </p>
-                    <p className="mt-3 text-[12.5px] text-paper-mid leading-relaxed flex-1">
+                    <p className="mt-3 text-caption text-paper-mid leading-relaxed flex-1">
                       {s.reading}
                     </p>
-                    <p className="voice-truth mt-4 text-[10px] text-paper-low">{t.weld}</p>
+                    <p className="voice-truth mt-4 text-caption text-paper-low">{t.weld}</p>
                     <div className="mt-5">
                       <BuyFlow
                         tier={tier}
@@ -305,14 +305,14 @@ export function Pricing9({
         </div>
 
         <R i={4}>
-          <p className="voice-truth mt-10 mx-auto max-w-2xl text-center text-[12px] text-paper-mid leading-relaxed">
+          <p className="voice-truth mt-10 mx-auto max-w-2xl text-center text-caption text-paper-mid leading-relaxed">
             {t.guarantee}
           </p>
         </R>
 
         {t.trialLine && (
           <R i={5}>
-            <p className="voice-truth mt-4 text-center text-[11px] text-sage">{t.trialLine}</p>
+            <p className="voice-truth mt-4 text-center text-caption text-sage">{t.trialLine}</p>
           </R>
         )}
       </div>
@@ -333,7 +333,7 @@ export function Close9({
   return (
     <section className="relative px-6 pt-24 pb-40 text-center">
       <Rs i={0}>
-        <h2 className="voice-moment text-[clamp(2.6rem,6.5vw,5rem)] leading-[1.08] text-paper-hi">
+        <h2 className="voice-moment text-display leading-[1.08] text-paper-hi">
           {t.closeH}
         </h2>
       </Rs>
@@ -346,7 +346,7 @@ export function Close9({
       {/* the exclusion line lives AFTER the ask now — a sign-off, not a
           bouncer at the register (the copywriter's "renunciation mode" fix) */}
       <Rf i={2}>
-        <p className="mt-14 text-[13px] text-paper-low">{t.exclusion}</p>
+        <p className="mt-14 text-sm text-paper-low">{t.exclusion}</p>
       </Rf>
     </section>
   );

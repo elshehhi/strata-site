@@ -170,7 +170,7 @@ export default function ArtistChapter({ t }: { t: Dict["artist"] }) {
             {t.readings.map((k, i) => (
               <span
                 key={k}
-                className={`ac-reading voice-truth text-[11px] px-4 py-2 rounded glass opacity-0 ${
+                className={`ac-reading voice-truth text-caption px-4 py-2 rounded glass opacity-0 ${
                   i === 0
                     ? "text-dawn-hi border-dawn/40 shadow-[0_0_30px_-6px_rgba(232,162,92,.5)]"
                     : "text-paper-low"
@@ -188,33 +188,33 @@ export default function ArtistChapter({ t }: { t: Dict["artist"] }) {
             <h2 className="voice-moment text-3xl sm:text-4xl text-paper-hi leading-tight">
               {t.b1h}
             </h2>
-            <p className="mt-5 text-paper-mid text-[15px] leading-relaxed">{t.b1p}</p>
+            <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.b1p}</p>
           </div>
 
           <div className="ac-copy-2 md:absolute md:inset-x-0 md:opacity-0">
             <h2 className="voice-moment text-3xl sm:text-4xl text-paper-hi leading-tight">
               {t.b2h}
             </h2>
-            <p className="mt-5 text-paper-mid text-[15px] leading-relaxed">{t.b2p}</p>
+            <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.b2p}</p>
           </div>
 
           <div className="ac-copy-3 md:absolute md:inset-x-0 md:opacity-0">
             <h2 className="voice-moment text-3xl sm:text-4xl text-paper-hi leading-tight">
               {t.b3h}
             </h2>
-            <p className="mt-5 text-paper-mid text-[15px] leading-relaxed">{t.b3p}</p>
+            <p className="mt-5 text-paper-mid text-body leading-relaxed">{t.b3p}</p>
           </div>
         </div>
 
         {/* beat IV — the creed, above everything */}
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <h2 className="ac-creed-1 voice-moment opacity-0 text-[clamp(2.4rem,6vw,4.6rem)] leading-[1.1] text-paper-hi">
+          <h2 className="ac-creed-1 voice-moment opacity-0 text-display leading-[1.1] text-paper-hi">
             {t.creed1}
           </h2>
-          <h2 className="ac-creed-2 voice-moment opacity-0 text-[clamp(2.4rem,6vw,4.6rem)] leading-[1.1] text-dawn-hi">
+          <h2 className="ac-creed-2 voice-moment opacity-0 text-display leading-[1.1] text-dawn-hi">
             {t.creed2}
           </h2>
-          <p className="ac-creed-3 opacity-0 mt-8 text-paper-mid text-[15px]">{t.creed3}</p>
+          <p className="ac-creed-3 opacity-0 mt-8 text-paper-mid text-body">{t.creed3}</p>
         </div>
       </div>
     </section>

@@ -67,7 +67,7 @@ export default function FieldChapter({ t, lede }: { t: Dict["field"]; lede?: str
           <h2 className="voice-moment text-4xl sm:text-5xl text-paper-hi leading-tight">
             {t.h}
           </h2>
-          <p className="mt-4 text-paper-mid text-[15px] max-w-md">{t.p}</p>
+          <p className="mt-4 text-paper-mid text-body max-w-md">{t.p}</p>
           {lede && (
             <p className="voice-moment mt-6 text-xl text-dawn-hi">{lede}</p>
           )}
@@ -94,7 +94,7 @@ export default function FieldChapter({ t, lede }: { t: Dict["field"]; lede?: str
               {/* gallery plate */}
               <figcaption className="mt-5 flex items-baseline justify-between gap-3">
                 <span className="voice-moment text-lg text-paper-hi">{t.titles[w.key]}</span>
-                <span className="voice-truth text-[10px] tracking-micro uppercase text-paper-low">
+                <span className="voice-truth text-micro tracking-micro uppercase text-paper-low">
                   {t.chip}
                 </span>
               </figcaption>
